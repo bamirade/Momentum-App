@@ -1,4 +1,4 @@
-const images = ['image4.png', 'image2.png', 'image3.png'];
+const images = ['image4.png', 'image2.png', 'image3.png']; //sample only, FIND THEME SOON!!!
 let index = 0;
 
 const imageObjects = [];
