@@ -1,0 +1,29 @@
+:root {
+    overflow-y: hidden;
+}
+
+#overview {
+	background-image:url('media/image1.png');
+	background-position:center,center;
+	background-repeat:no-repeat,no-repeat;
+	background-size:cover,cover;
+	max-width:100vw;
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+    margin: none;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20% 20%;
+	grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+
+
+@media screen {
+
+    
+}
