@@ -21,6 +21,6 @@ setInterval(() => {
 
 //setInterval(() => {
 //  const quoteText = quotes[index];
-//  document.getElementById('class').style.content = `${quoteText}`;
+//  document. = `${quoteText}`;
 //  index = (index + 1) % quoteText.length;
 //}, 5000);
