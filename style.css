@@ -2,7 +2,7 @@
     overflow-y: hidden;
 }
 
-#overview {
+body {
 	background-image:url('media/image1.png');
 	background-position:center,center;
 	background-repeat:no-repeat,no-repeat;
@@ -17,8 +17,43 @@
 
 main {
 	display: grid;
-	grid-template-columns: 20% 20% 20% 20% 20%;
-	grid-template-rows: 20% 20% 20% 20% 20%;
+	grid-template-columns: repeat(5, 20vw);
+	grid-template-rows: repeat(5, 20vh);
+}
+
+.content {
+    background-color: rgba(255,255,255,.8);
+    border-radius: 0.25em;
+    box-shadow: 0 0 0.25em rgb(0 0 0 / 25%);
+    box-sizing: border-box;
+    left: 50%;
+    padding: 10vmin;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.page {
+	grid-column-start: 3;
+	grid-column-end: 5;
+	grid-row-start: 3;
+}
+
+#name {
+	background-color: transparent;
+	border: transparent;
+}
+
+.next-button {
+	padding: 10px;
+	margin: 10px;
+	color: black;
+	content: ">";
+}
+
+div {
+    display: block;
 }
 
 

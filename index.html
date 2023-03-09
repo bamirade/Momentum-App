@@ -8,12 +8,22 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   
-  <body id="overview">
+  <body>
     <main>
-      <div class="page-one-active"></div> <!--name-->
-      <button type="button" class="next-button">Next</button> 
-      <div class="page-two"></div><!--time//default at refresh-->
-      <div class="page-three"></div>
+      <div class="page one active">
+        <h1 class="greet">Hi,
+          <input type="text" id="name" name="name" placeholder="Your name.." required> 
+          <button type="submit" class="next-button"></button> 
+        </h1>
+      </div> <!--name-->
+      
+      <div class="page two"></div><!--time//default at refresh-->
+      <!--<div class="weather"></div> API?-->
+      <!--<h2 class="quotes"></h2> API also / built-in maybe? *modify css content then interval*-->
+      
+
+
+
     </main>
     <script src="script.js"></script>
   </body>

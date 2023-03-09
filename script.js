@@ -10,6 +10,17 @@ for (const image of images) {
 
 setInterval(() => {
   const imageUrl = `url('media/${images[index]}')`;
-  document.getElementById('overview').style.backgroundImage = `${imageUrl}`;
+  document.querySelector('body').style.backgroundImage = `${imageUrl}`;
+  index = (index + 1) % images.length;
+}, 5000);
+
+
+var name = documentElementById("name").value;
+
+const quotes = ['quote 1', 'quote 2', 'quote 3']
+
+setInterval(() => {
+  const quoteText = quotes[index];
+  document.querySelector('body').style.content = `${imageUrl}`;
   index = (index + 1) % images.length;
 }, 5000);
