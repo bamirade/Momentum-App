@@ -15,6 +15,20 @@ setInterval(() => {
 }, 5000);
 
 
+function updateTime() {
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+  hours = (hours < 10 ? "0" : "") + hours;
+  minutes = (minutes < 10 ? "0" : "") + minutes;
+  seconds = (seconds < 10 ? "0" : "") + seconds;
+  var timeString = hours + ":" + minutes + ":" + seconds;
+  document.querySelector(".clock").textContent = timeString;
+  setTimeout(updateTime, 1000);
+}
+updateTime();
+
 //var name = documentElementById("name").value;
 
 //const quotes = ['quote 1', 'quote 2', 'quote 3']
