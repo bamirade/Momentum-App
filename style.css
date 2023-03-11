@@ -28,6 +28,13 @@ body {
 	grid-column: 3/5;
 }
 
+.page.one #name {
+	width: 20vw;
+	border: 0px solid #000000;
+    border-bottom-width: 1px;
+    background-color: transparent;
+}
+
 .page.one .clock {
 	grid-row: 1/2;
 	grid-column: 7/7;
