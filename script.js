@@ -28,13 +28,3 @@ function updateTime() {
   setTimeout(updateTime, 1000);
 }
 updateTime();
-
-//var name = documentElementById("name").value;
-
-//const quotes = ['quote 1', 'quote 2', 'quote 3']
-
-//setInterval(() => {
-//  const quoteText = quotes[index];
-//  document. = `${quoteText}`;
-//  index = (index + 1) % quoteText.length;
-//}, 5000);
