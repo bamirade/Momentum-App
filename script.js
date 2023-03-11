@@ -1,6 +1,8 @@
+//Background Image 
 const images = ['image4.png', 'image2.png', 'image3.png']; //sample only, FIND THEME SOON!!!
 let index = 0;
 
+//Preload
 const imageObjects = [];
 for (const image of images) {
   const img = new Image();
@@ -8,6 +10,8 @@ for (const image of images) {
   imageObjects.push(img);
 }
 
+
+//change every 5 seconds *1 minute, add transition
 setInterval(() => {
   const imageUrl = `url('media/${images[index]}')`;
   document.querySelector('body').style.backgroundImage = `${imageUrl}`;
@@ -15,6 +19,7 @@ setInterval(() => {
 }, 5000);
 
 
+//Real-Time Clock - HH:MM:SS *i.can be 12h or 24h & time zone
 function updateTime() {
   var now = new Date();
   var hours = now.getHours();
