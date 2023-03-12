@@ -19,7 +19,7 @@ setInterval(() => {
 }, 5000);
 
 
-//Real-Time Clock - HH:MM:SS *i.can be 12h or 24h & time zone
+//Real-Time Clock - HH:MM:SS *i.can be 12h or 24h & time zones
 function updateTime() {
   var now = new Date();
   var hours = now.getHours();
