@@ -1,0 +1,80 @@
+Momentum App Acceptance Criteria
+Introductory Input (atleast name, other details optional)
+Momentum Dashboard (Main Layout)
+	a.Real-Time Clock - HH:MM:SS
+		a.i.can be 12h or 24h
+		a.ii.optional timezone
+	b.Greeting
+		b.i.display input name on greeting from Intro input
+		b.ii.greeting based on time
+		b.iii.update name
+Background Image
+	a.change every 1 minute
+Quote
+	a.change every 1 minute
+	b.static array of quotes
+	c.optional from api
+Todo List
+	a.small panel with open and close
+	b.can add to list
+	c.can edit text
+	d.strikethrough if checkbox is checked
+	e.can delete from list
+LocalStorage Utilization - when refreshed data is still there
+
+
+.*Sea waves palette, sky and sun/moon colors (bg for body, depends on time of the day, 3/3 or 5/5, can be appended  with greetings) 
+
+1.Morning: -#4B8BBE(Sky Blue) - #88BEE0(Light Sky Blue) - #CCE0F0(Pale Sky Blue)
+
+2.Mid - Morning: -#1D6A96(Ocean Blue) - #3E8AB3(Medium Ocean Blue) - #6EB0D7(Light Ocean Blue)
+
+3.Late Morning: -#0077BE(Deep Sea Blue) - #3399CC(Sea Blue) - #66B2FF(Light Sea Blue)
+
+4.Noon: -#0D3D56(Dark Teal) - #3A6F7C(Teal) - #6E9EA2(Light Teal)
+
+5.Afternoon: -#0077BE(Deep Sea Blue) - #3399CC(Sea Blue) - #66B2FF(Light Sea Blue You sent 
+
+6.Late Afternoon: -#1D6A96(Ocean Blue) - #3E8AB3(Medium Ocean Blue) - #6EB0D7(Light Ocean Blue)
+
+7.Evening: -#4B8BBE(Sky Blue) - #88BEE0(Light Sky Blue) - #CCE0F0(Pale Sky Blue)
+
+8.Sunset: -#FF7F50(Coral) - #FFD700(Gold) - #EE82EE(Violet)
+
+9.Twilight: -#1C1C1C(Charcoal) - #4B4B4B(Slate Gray) - #778899(Light Slate Gray)
+
+10.Night: -#000080(Navy Blue) - #000033(Midnight Blue) - #191970(Dark Midnight Blue) You sent 
+
+1.Morning: -Sky: #CCE0F0(Pale Sky Blue) - Sun: #FFD700(Gold)
+
+2.Mid - Morning: -Sky: #88BEE0(Light Sky Blue) - Sun: #FFDB58(Sun Yellow)
+
+3.Late Morning: -Sky: #4B8BBE(Sky Blue) - Sun: #FFCC33(Bright Sun Yellow)
+
+4.Noon: -Sky: #87CEEB(Sunny Sky Blue) - Sun: #FFFF00(Yellow)
+
+5.Afternoon: -Sky: #4B8BBE(Sky Blue) - Sun: #FFCC33(Bright Sun Yellow) You sent 
+
+6.Late Afternoon: -Sky: #88BEE0(Light Sky Blue) - Sun: #FFDB58(Sun Yellow)
+
+7.Evening: -Sky: #CCE0F0(Pale Sky Blue) - Sun: #FFD700(Gold)
+
+8.Sunset: -Sky: #FFA07A(Light Salmon) - Sun: #FF4500(Orange Red)
+
+9.Twilight: -Sky: #483D8B(Dark Slate Blue) - Moon: #F8F8FF(Ghost White)
+
+10.Night: -Sky: #000033(Midnight Blue) - Moon: #E6E6FA(Lavender)
+
+*Animate transitions
+
+.*To do List
+
+,*stars / horoscope (input dropdown, hovering over would open iframe/modal daily horoscope, use api) * constallation logos
+
+,*remove bg for other avatars
+
+,*svg for waves, positioning of sun and moon.  **include moon phases and sea level ***math.random shooting star at Night
+
+,** instead of sky bgc, change it depends on which avatar series (would be limitted to ff and pokemans, pixel/retro theme)
+
+*seperate body svg and background gradient color or animation
