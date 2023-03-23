@@ -29,7 +29,7 @@ setInterval(() => {
   const imageUrl = `url('media/${images[index]}'), ${gradientColors}`;
   document.querySelector('body').style.backgroundImage = `${imageUrl}`;
   index = (index + 1) % images.length;
-}, 5000);
+}, 60000);
 
 
 const imagess = [];
@@ -172,7 +172,7 @@ function fetchQuote() {
 }
 
 fetchQuote();
-setInterval(fetchQuote, 5000);
+setInterval(fetchQuote, 60000);
 
 
 const clearStorageBtn = document.getElementById('clear-storage');
