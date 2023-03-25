@@ -1,56 +1,60 @@
 const images = ['waves1.svg', 'waves2.svg', 'waves3.svg', 'waves4.svg', 'waves5.svg', 'waves6.svg', 'waves7.svg', 'waves8.svg', 'waves9.svg', 'waves10.svg'];
 let index = 0;
 const imageObjects = [];
+
 for (const image of images) {
   const img = new Image();
   img.src = `media/${image}`;
   imageObjects.push(img);
 }
+
+function waveBackground() {
+  const imageUrl = `url('media/${images[index]}')`;
+  document.querySelector('.wave').style.backgroundImage = `${imageUrl}`;
+  index = (index + 1) % images.length;
+}
+
+waveBackground();
+setInterval(waveBackground, 60000);
+
 const now = new Date();
 const hour = now.getHours();
 let gradientColors;
-if (hour >= 6 && hour < 18) {
-  gradientColors = 'radial-gradient(ellipse at bottom, #87CEEB 0%, #1E90FF 100%)';
-} else {
-  gradientColors = 'radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)';
-}
-const imageUrl = `url('media/${images[index]}'), ${gradientColors}`;
-document.querySelector('body').style.backgroundImage = `${imageUrl}`;
 
-setInterval(() => {
-  const now = new Date();
-  const hour = now.getHours();
-  let gradientColors;
+function bodyBackground() {
   if (hour >= 6 && hour < 18) {
     gradientColors = 'radial-gradient(ellipse at bottom, #87CEEB 0%, #1E90FF 100%)';
   } else {
     gradientColors = 'radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)';
   }
-  const imageUrl = `url('media/${images[index]}'), ${gradientColors}`;
+  const imageUrl = ` ${gradientColors}`;
   document.querySelector('body').style.backgroundImage = `${imageUrl}`;
-  index = (index + 1) % images.length;
-}, 60000);
+};
 
+bodyBackground();
 
-const imagess = [];
+const images2 = [];
 for (let i = 1; i <= 19; i++) {
-  imagess.push(`image${i}.webp`);
+  images2.push(`image${i}.webp`);
 }
 
-const imageObjectss = [];
-for (const image of imagess) {
+const imageObjects2 = [];
+for (const image of images2) {
   const img = new Image();
   img.src = `media/img1/${image}`;
-  imageObjectss.push(img);
+  imageObjects2.push(img);
 }
 
 let index2 = 0;
 
-setInterval(() => {
-  const imageUrl = `url('media/img1/${imagess[index2]}')`;
+function chibiBackground() {
+  const imageUrl = `url('media/img1/${images2[index2]}')`;
   document.querySelector('.page.two .chibi').style.backgroundImage = `${imageUrl}`;
-  index2 = (index2 + 1) % imagess.length;
-}, 5000);
+  index2 = (index2 + 1) % images2.length;
+}
+
+chibiBackground();
+setInterval(chibiBackground, 5000);
 
 let is24HourFormat = false;
 const clockElement1 = document.querySelector(".page.one .clock");
@@ -93,7 +97,6 @@ const dateElement1 = document.querySelector(".page.one .date");
 const dateElement2 = document.querySelector(".page.two .date");
 
 function updateDate() {
-  const now = new Date();
   const year = now.getFullYear();
   const month = now.toLocaleString("default", {
     month: "long"
@@ -174,7 +177,6 @@ function fetchQuote() {
 fetchQuote();
 setInterval(fetchQuote, 60000);
 
-
 const clearStorageBtn = document.getElementById('clear-storage');
 
 function clearStorage() {
@@ -226,20 +228,23 @@ function updateName() {
 
 displayName.addEventListener('click', updateName);
 
-
 const greeting1 = document.querySelector(".page.one #greeting");
 const greeting2 = document.querySelector(".page.two #greeting");
 
-if (hour >= 5 && hour < 12) {
-  greeting1.textContent = 'Good morning';
-  greeting2.textContent = 'Good morning';
-} else if (hour >= 12 && hour < 18) {
-  greeting1.textContent = 'Good afternoon';
-  greeting2.textContent = 'Good afternoon';
-} else {
-  greeting1.textContent = 'Good evening';
-  greeting2.textContent = 'Good evening';
-}
+function updateGreetings() {
+  if (hour >= 5 && hour < 12) {
+    greeting1.textContent = 'Good morning';
+    greeting2.textContent = 'Good morning';
+  } else if (hour >= 12 && hour < 18) {
+    greeting1.textContent = 'Good afternoon';
+    greeting2.textContent = 'Good afternoon';
+  } else {
+    greeting1.textContent = 'Good evening';
+    greeting2.textContent = 'Good evening';
+  }
+};
+
+updateGreetings();
 
 const todoButton = document.querySelector('.todo');
 const todoPanel = document.querySelector('.todo-panel');
