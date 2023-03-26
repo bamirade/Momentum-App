@@ -171,7 +171,7 @@ button {
 
 .page.two #description {
 	height: 25%;
-	width: 25%;
+	width: 100%;
 	font-size: 2vh;
 	font-weight: bold;
 	margin: 0;
