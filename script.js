@@ -162,6 +162,22 @@ if (storedData) {
   iconElem.innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="Weather Icon">`;
 }
 
+cityElem.addEventListener('click', () => {
+  const cityName = prompt('Enter city name:');
+  if (cityName) {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=30df0010a3aea22978f6f52a56a252e2`)
+      .then(response => response.json())
+      .then(data => {
+        cityElem.innerText = data.name;
+        tempElem.innerText = Math.round(data.main.temp - 273.15) + '°C';
+        descElem.innerText = data.weather[0].description;
+        iconElem.innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="Weather Icon">`;
+        localStorage.setItem('weatherData', JSON.stringify(data));
+      })
+      .catch(error => console.error(error));
+  }
+});
+
 const quotesElement = document.querySelector('.quotes');
 const quoteTextElement = quotesElement.querySelector('q');
 const authorElement = quotesElement.querySelector('a');
@@ -281,6 +297,14 @@ function renderTodos() {
     if (todo.completed) {
       todoText.style.textDecoration = 'line-through';
     }
+    todoText.addEventListener('dblclick', () => {
+      const newText = prompt('Enter new text for the todo item:', todo.text);
+      if (newText) {
+        todo.text = newText;
+        saveTodos();
+        renderTodos();
+      }
+    });
     const todoDeleteButton = document.createElement('button');
     todoDeleteButton.textContent = 'Delete';
     todoDeleteButton.addEventListener('click', () => {
