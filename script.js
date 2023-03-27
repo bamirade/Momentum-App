@@ -8,13 +8,20 @@ for (const image of images) {
   imageObjects.push(img);
 }
 
+function waveBgRandom() {
+  const randomNumber = Math.floor(Math.random() * 10) + 1;
+  const imageUrl = `url('media/waves${randomNumber}.svg')`;
+  document.querySelector('.wave').style.backgroundImage = imageUrl;
+}
+
+waveBgRandom();
+
 function waveBackground() {
   const imageUrl = `url('media/${images[index]}')`;
   document.querySelector('.wave').style.backgroundImage = `${imageUrl}`;
   index = (index + 1) % images.length;
 }
 
-waveBackground();
 setInterval(waveBackground, 60000);
 
 const now = new Date();
